@@ -148,7 +148,6 @@ aside {
 }
 
 aside .top {
-    background: #fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -158,6 +157,9 @@ aside .top {
 aside .logo {
     display: flex;
     gap: 0.8rem;
+}
+aside .logo span {
+    color: var(--color-danger);
 }
 aside .logo img {
     width: 2rem;
@@ -417,7 +419,7 @@ main .recent-orders a {
     justify-content:space-between;
     align-items:center;
     height:1.6rem;
-    width:1.6rem;
+    width:4.2rem;
     cursor:pointer;
     border-radius: var(--border-radius-1)
 }
@@ -567,14 +569,14 @@ main .recent-orders a {
     
     main .insights {
         grid-template-columns: 1fr;
-        grid: 0;
+        gap: 0;
     }
     
     main .recent-orders {
         width: 94%;
         position: absolute;
         left: 50%;
-        transform: translate(-50%);
+        transform: translateX(-50%);
         margin: 2rem 0 0 8.8rem;
     }
     
@@ -587,7 +589,7 @@ main .recent-orders a {
         display: none;
     }
     
-    main table body tr td:last-child, main table body tr td:first-child {
+    main table tbody tr td:last-child, main table tbody tr td:first-child {
         display: none;
     }
     
@@ -617,6 +619,9 @@ main .recent-orders a {
     @keyframes showMenu {
         to{
             left: 0;
+        }
+        from{
+            right: 0;
         }
     }
     aside logo {
